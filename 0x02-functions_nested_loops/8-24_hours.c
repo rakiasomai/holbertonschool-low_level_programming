@@ -1,17 +1,25 @@
+#include <stdio.h>
 #include "holberton.h"
 /**
-* print_last_digit - prints and returns the last digit of an input int
+* jack_bauer - prints every minute of the day starting from
+* 00.00  to 23.59
 *
-* @c: input integer
-*
-* Return: Positive single digit int
+* Return: nothing
 */
-int print_last_digit(int c)
+
+void jack_bauer(void)
 {
-int r;
-r = c % 10;
-if (r < 0)
-r *= -1;
-_putchar(r + '0');
-return (r);
+int hour, min;
+for (hour = 0; hour < 24; hour++)
+{
+for (min = 0; min < 60; min++)
+{
+_putchar((hour / 10) + '0');
+_putchar((hour % 10) + '0');
+_putchar(':');
+_putchar((min / 10) + '0');
+_putchar((min % 10) + '0');
+_putchar('\n');
+}
+}
 }
