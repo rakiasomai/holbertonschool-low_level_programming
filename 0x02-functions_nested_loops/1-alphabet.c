@@ -6,10 +6,8 @@
 */
 void print_alphabet(void)
 {
-char *a = "abcdefghijklmnopqrstuvwxyz\n";
-while (*a)
-{
-_putchar(*a);
-a++;
-}
+char i = 'a';
+for (i = 'a'; i <= 'z'; i++)
+_putchar(i);
+_putchar('\n');
 }
