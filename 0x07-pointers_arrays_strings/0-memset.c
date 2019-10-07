@@ -13,8 +13,8 @@ y = 0;
 while (n > 0)
 {
 s[y] = b;
-y ++;
-n --;
+y++;
+n--;
 }
-return(s);
+return (s);
 }
