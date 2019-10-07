@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
-* *_strch - function that locates a character in a string
+* *_strchr - function that locates a character in a string
 * @s: is a string
 * @c : is the charcater to locate
 * Return: c
