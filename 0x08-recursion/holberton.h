@@ -11,3 +11,5 @@ int helper_prime(int z, int y);
 int is_palindrome(char *s);
 int my_pal(char *s, int y);
 int get_length(char *s);
+int wildcmp(char *s1, char *s2);
+
