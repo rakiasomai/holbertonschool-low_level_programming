@@ -1,17 +1,21 @@
 #include "holberton.h"
 #include <stdio.h>
+#include <stdlib.h>
 /**
 * main - a program that multiplies two numbers.
 * @argc: is an argument.
 * @argv: is an argument.
-* Return: 0
+* Return: 1
 */
 int main(int argc, char *argv[])
 {
-int y;
-for (y = 0; y < argc; y++)
+(void) argc;
+if (argv[1] && argv[2])
 {
-printf("%s\n", argv[y]);
-}
+printf("%d\n", atoi(argv[1]) * atoi(argv[2]));
 return (0);
+}
+else
+printf("Error\n");
+return (1);
 }
