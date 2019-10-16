@@ -13,7 +13,7 @@ char *p1, *p;
 int y, z, x;
 if (ac == 0 || av == NULL)
 return (NULL);
-for (y = 0, total = 0; y < ac; y++)
+for (y = 0, x = 0; y < ac; y++)
 {
 for (z = 0; *(*(av + y) + z) != '\0'; z++, x++)
 ;
