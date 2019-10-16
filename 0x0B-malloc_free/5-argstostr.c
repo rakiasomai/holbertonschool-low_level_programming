@@ -20,7 +20,7 @@ for (z = 0; *(*(av + y) + z) != '\0'; z++, x++)
 x++;
 }
 x++;
-p = malloc(x * sizeof(char));
+p = malloc(x *sizeof(char));
 if (p == NULL)
 return (NULL);
 b = p;
