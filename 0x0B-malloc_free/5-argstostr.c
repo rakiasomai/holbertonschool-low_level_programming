@@ -9,7 +9,7 @@
 */
 char *argstostr(int ac, char **av)
 {
-char *p1, *p;
+char *p, *b;
 int y, z, x;
 if (ac == 0 || av == NULL)
 return (NULL);
@@ -20,19 +20,19 @@ for (z = 0; *(*(av + y) + z) != '\0'; z++, x++)
 x++;
 }
 x++;
-p1 = malloc(x * sizeof(char));
-if (p1 == NULL)
+p = malloc(x * sizeof(char));
+if (p == NULL)
 return (NULL);
-p = p1;
+b = p;
 for (y = 0; y < ac; y++)
 {
-for (y = 0; av[y][z] != '\0'; z++)
+for (z = 0; av[y][z] != '\0'; z++)
 {
-*p1 = av[y][z];
-p1++;
+*p = av[y][z];
+p++;
 }
-*p1 = '\n';
-p1++;
+*p = '\n';
+p++;
 }
-return (p);
+return (b);
 }
