@@ -19,7 +19,7 @@ return (NULL);
 
 for (i = 0; name[i]; i++)
 ;
-new_dog->name = malloc(i *sizeof(char) + 1);
+new_dog->name = malloc((i + 1) *sizeof(char));
 if (new_dog == NULL)
 {
 free(new_dog);
@@ -32,7 +32,7 @@ new_dog->name[y] = name[y];
 
 for (j = 0; owner[j]; j++)
 ;
-new_dog->owner = malloc(j *sizeof(char) + 1);
+new_dog->owner = malloc((j + 1) *sizeof(char));
 if (new_dog == NULL)
 {
 free(new_dog->name);
