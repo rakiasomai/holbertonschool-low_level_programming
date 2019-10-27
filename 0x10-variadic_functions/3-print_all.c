@@ -2,43 +2,40 @@
 #include <stdio.h>
 #include "variadic_functions.h"
 /**
-* print_char - print a character.
-* @c: a character to print.
-* Return: void.
+* _printchar - function that print a character.
+* @list: is a list
 */
-void print_char(va_list c)
+void _printchar(va_list list)
 {
-printf("%c", va_arg(c, int));
+printf("%c", va_arg(list, int));
 }
 /**
-* print_str - function that print a string
-* @s: is a string.
-* Return: void.
+* _printstr - function that print string
+* @list: is a list
 */
-void print_str(va_list s)
+void _printstr(va_list list)
 {
-char *str = va_arg(s, char *);
-if (str == NULL)
-str = "(nil)";
-printf("%s", str);
+char *s;
+s = va_arg(list, char *);
+if (s == NULL)
+s = "(nil)";
+printf("%s", s);
 }
 /**
-* print_int - function that print a integer
-* @i: is an integer.
-* Return: void.
+* _printfloat - function that print float
+* @list: va_list passed to function
 */
-void print_int(va_list i)
+void _printfloat(va_list list)
 {
-printf("%d", va_arg(i, int));
+printf("%f", va_arg(list, double));
 }
 /**
-* print_float - function that print a float.
-* @f: is a float.
-* Return: void.
+* _printint - function that print an integer
+* @list: is a list
 */
-void print_float(va_list f)
+void _printint(va_list list)
 {
-printf("%f", va_arg(f, double));
+printf("%d", va_arg(list, int));
 }
 /**
 * print_all - function that print anything.
