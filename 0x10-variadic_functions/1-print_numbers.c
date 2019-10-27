@@ -2,7 +2,7 @@
 #include <stdio.h>
 /**
 * print_numbers - function that prints numbers, followed by a new line.
-* *separator: is a pointer.
+* @separator: is a pointer.
 * @n: is an integer.
 * Return: 0
 */
