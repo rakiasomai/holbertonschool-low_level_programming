@@ -13,9 +13,18 @@ y = 0;
 list = h;
 while (list != NULL)
 {
+if (list->str == NULL)
+{
+printf("[%d] %s\n", 0, "(nil)");
+list = list->next;
+y++;
+}
+else
+{
 printf("[%d] %s\n", list->len, list->str);
 list = list->next;
 y++;
+}
 }
 return (y);
 }
