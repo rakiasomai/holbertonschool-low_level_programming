@@ -1,4 +1,4 @@
-#include "lists"
+#include "lists.h"
 /**
 * free_listint2 - function that frees a list.
 * @head: is a double pointer.
@@ -11,7 +11,7 @@ return;
 while (*head != NULL)
 {
 p = *head;
-*head = *head->next;
+*head = (*head)->next;
 free(p);
 }
 }
