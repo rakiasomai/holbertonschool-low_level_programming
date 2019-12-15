@@ -1,30 +1,30 @@
 #include "lists.h"
-/**
-* delete_dnodeint_at_index - function that Delete node at index of a `dlistint_t` LL
-* @head: is a double pointer
-* @index: is an integer
-* Return: 1 if succeeded, -1 if failed
-*/
+ /**
+ * delete_dnodeint_at_index - fun Delete node at index of a `dlistint_t` LL
+ * @head: is a double pointer
+ * @index: is an integer
+ * Return: 1 if succeeded, -1 if failed
+ */
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
-dlistint_t *y, *next, *p;
+dlistint_t *y, *next, *prev;
 unsigned int c;
 if (*head == NULL)
 return (-1);
-for (y = *head, c = 0, p = NULL; y && c < index; c++)
+for (y = *head, c = 0, prev = NULL; y && c < index; c++)
 {
-p = y;
+prev = y;
 y = y->next;
 }
 if (y == NULL)
 return (-1);
 next = y->next;
-if (p == NULL)
+if (prev == NULL)
 {
 free(y);
 if (next != NULL)
 {
-next->p = NULL;
+next->prev = NULL;
 *head = next;
 }
 else
@@ -32,13 +32,13 @@ else
 }
 else if (next == NULL)
 {
-p->next = NULL;
+prev->next = NULL;
 free(y);
 }
 else
 {
-p->next = next;
-next->p = p;
+prev->next = next;
+next->prev = prev;
 free(y);
 }
 return (1);
