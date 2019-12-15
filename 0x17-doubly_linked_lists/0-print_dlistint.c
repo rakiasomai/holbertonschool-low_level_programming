@@ -13,5 +13,5 @@ while (y && y->prev)
 y = y->prev;
 for (c = 0; y; c++, y = y->next)
 printf("%d\n", y->n);
-return (c;
+return (c);
 }
