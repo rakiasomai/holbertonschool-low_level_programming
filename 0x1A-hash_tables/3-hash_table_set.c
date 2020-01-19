@@ -16,6 +16,8 @@ i = key_index((const unsigned char *)key, ht->size);
 tp = ht->array[i];
 if (tp != NULL)
 {
+while (tp)
+{
 if (strcmp(tp->key, key) == 0)
 {
 tp->value = strdup(value);
