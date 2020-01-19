@@ -9,10 +9,6 @@ hash_node_t *tp, *anc;
 unsigned long int xt, y;
 if (ht == NULL)
 return;
-if (ht->array == NULL)
-{
-free(ht);
-return;
 }
 for (y = 0, xt = ht->size; y < sz; y++)
 {
