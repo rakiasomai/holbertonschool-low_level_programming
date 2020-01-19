@@ -26,6 +26,7 @@ return (1);
 tp = tp->next;
 }
 }
+new = malloc(sizeof(hash_node_t));
 if (new == NULL)
 return (0);
 new->key = strdup(key);
