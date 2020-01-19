@@ -1,7 +1,7 @@
 #include "hash_tables.h"
 /**
 * hash_table_delete - function that delete a hash table
-* @ht: hash table
+* @h: hash table
 */
 void hash_table_delete(hash_table_t *ht)
 {
@@ -15,7 +15,7 @@ free(ht);
 return;
 }
 }
-for (y = 0, xt = ht->size; y < sz; ++y)
+for (y = 0, xt = ht->size; y < sz; y++)
 {
 tp = ht->array[y];
 while (tp)
