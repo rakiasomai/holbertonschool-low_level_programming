@@ -15,7 +15,7 @@ free(ht);
 return;
 }
 }
-for (y = 0, xt = ht->size; y < sz; y++)
+for (y = 0, xt = ht->size; y < xt; ++y)
 {
 tp = ht->array[y];
 while (tp)
