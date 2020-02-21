@@ -16,4 +16,4 @@ def island_perimeter(grid):
                 if k != 0 and grid[y][k-1] == 1:
                     link = (link + 1)
 
-    return(perm - (2 * link))
+    return perm
