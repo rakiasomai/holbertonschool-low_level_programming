@@ -47,7 +47,7 @@ return (-1);
 void print_array(int *array, size_t add, size_t size)
 {
 printf("Searching in array: ");
-for (add = 0; add <= size; add++)
+for (; add <= size; add++)
 {
 printf("%d", array[add]);
 if (add < size)
