@@ -10,28 +10,48 @@
 */
 int binary_search(int *array, size_t size, int value)
 {
-size_t a, y = 0;
-size_t b = (size - 1);
-while (b > a)
+int take;
+size_t a = 0;
+if (array == NULL || size == 0)
+return (-1);
+size--;
+while (a <= size)
 {
-printf("Seraching in array: ");
-for (y = a; y <= b; y++)
+print_array(array, a, size);
+take = (size - a) / 2 + a;
+if (array[take] == value)
+return (take);
+else if (array[take] < value)
 {
-printf(*(array + y) + "0");
-if (y < b)
-{
-printf(",");
-printf(" ");
-}
-}
-printf("\n");
-size_t c = (a + b) / 2;
-if (array[c] == value)
-return (c);
-if (array[c] < value)
-a = c + 1;
+if (size % 2 == 1)
+a = take + 1;
 else
-b = c - 1;
+a = take;
+}
+else
+{
+if (size % 2 == 1)
+size = take;
+else
+size = take - 1;
+}
 }
 return (-1);
+}
+/**
+* print_array - printing the current array
+* @array: this is an array
+* @add: starting incrementer index
+* @size: the size ofincremeneted idex
+*/
+void print_array(int *array, size_t add, size_t size)
+{
+printf("Searching in array: ");
+for (add = 0; add <= size; add++)
+{
+printf("%d", array[add]);
+if (add < size)
+printf(", ");
+}
+printf("\n");
 }
